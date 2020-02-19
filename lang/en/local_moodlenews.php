@@ -10,4 +10,4 @@
 $string['pluginname'] = 'Moodle News';
 $string['news_category'] = 'Moodle News';
 $string['news_main_page'] = 'View news';
-
+$string['news_description'] = 'News Description';

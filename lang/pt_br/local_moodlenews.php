@@ -10,3 +10,4 @@
  $string['pluginname'] = 'Notícias do Moodle';
  $string['news_category'] = 'Notícias do Moodle';
  $string['news_main_page'] = 'Visualizar notícias';
+ $string['news_description'] = 'Descrição das notícias';

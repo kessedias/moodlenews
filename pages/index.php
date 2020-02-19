@@ -29,7 +29,9 @@ echo $OUTPUT->header();
 $news = [];
 
 $n1 = [
+    'id'            => 1,
     'title'         =>'O melhor Moodle do mundo', 
+    'description'   => 'É isso aí',
     'content'       =>'Estamos em 2077 e hoje completa o aniversário da melhor plataforma do mundo, o Mooodle Next Generation, que por sua vez, conta com a maior inteligência artificial já vista em Marte.', 
     'timecreated'   =>'20/08/2077', 
     'sourceimg'     =>'../images/image1.gif'
@@ -37,10 +39,11 @@ $n1 = [
 
 $news[] = $n1;
 //inicio
+// $out .= html_writer::start_tag('a',['href' => $CFG->wwwroot."/local/moodlenews/pages/index.php?id=".$value['id']]);
+// $out .= html_writer::tag('h2', $n1['title']);
+// $out .= html_writer::end_tag('div');
 
 foreach ($news as $key => $value) {
-
-
 
 $out .= html_writer::start_tag('div');
 $out .= html_writer::tag('h1', $value['title']);
