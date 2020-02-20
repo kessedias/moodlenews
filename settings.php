@@ -20,6 +20,6 @@ $ADMIN->add(
     new admin_externalpage(
         'moodlenews',
         get_string('news_main_page', 'local_moodlenews'),
-        new moodle_url('/local/moodlenews/pages/index.php')
+        new moodle_url('/local/moodlenews/pages/description_news.php')
     )
 );

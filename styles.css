@@ -1,4 +1,12 @@
 h1{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
+}
+
+/* p{
+    margin-bottom: 50px !important;
+} */
+
+.img-test{
+   margin-top: 50px !important;
 }
