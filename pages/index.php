@@ -31,7 +31,8 @@ $PAGE->set_pagelayout('admin');
 $PAGE->requires->css('/local/moodlenews/styles.css');
 //imprime a saída do cabeçalho
 echo $OUTPUT->header();
-
+//chamada do arquivo main.js
+//$PAGE->requires->js_call_amd('local_moodlenews/main');
 //Array de notícias
 $news = [];
 
@@ -70,6 +71,7 @@ $news[] = $n1;
 $news[] = $n2;
 $news[] = $n3;
 
+//aqui eu to pegando a varíavel id que está sendo recebida de description_news e comparando com a posição e valor do array
 $newsid = --$id;
 //inicio
 $out .= html_writer::start_tag('div');
@@ -78,6 +80,8 @@ $out .= html_writer::tag('p', $news[$newsid]['content']);
 $out .= html_writer::start_tag('div', ['class' => 'image-wrapper']);
 $out .= html_writer::tag('img', null, ['src' => $news[$newsid]['sourceimg'], 'alt' => 'img_news', 'width' => 600, 'height'=> 'auto']);
 $out .= html_writer::tag('p','Data: ' . $news[$newsid]['timecreated']);
+$out .= html_writer::start_tag('div', ['class' => 'btn-wrapper']);
+$out .= html_writer::tag('button', null, ['id' => 'btn-rating']);
 $out .= html_writer::end_tag('div');
 
 //printando a saída do html

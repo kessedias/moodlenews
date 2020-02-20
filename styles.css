@@ -10,3 +10,10 @@ h1{
 .img-test{
    margin-top: 50px !important;
 }
+
+#btn-rating{
+    background: url('http://imgur.com/I0EwG.png') transparent;
+    height: 48px;
+    width: 45px;
+    border: none;
+}
