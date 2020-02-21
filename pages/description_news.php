@@ -66,6 +66,7 @@ $out .= html_writer::start_tag('div');
 $out .= html_writer::tag('h1', 'G1 do Moodle');
 //estrutura de repetição
 foreach ($news as $key => $value) {
+    
 $out .= html_writer::start_tag('div', null, ['class' => 'mb-3']);
 $out .= html_writer::tag('img', null, ['class' => 'card-img-top img-test','src' => $value['bannerimg'], 'alt' => 'img_teste']);
 $out .= html_writer::start_tag('div', ['class' => 'card-body']);

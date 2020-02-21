@@ -57,12 +57,27 @@ define(['jquery'], function($){
     //ao clicar na tecla enter, o js muda a imagem da noticia
     //easteregg
     $(document).ready(function(){
-    $(document).keypress(function(e){
-        if(e.wich == 13 || e.keyCode == 13){
+        $(document).keypress(function(e){
+            if(e.wich == 13 || e.keyCode == 13){
            $('#change_img').attr('src', '../images/cat.gif')
+            }
+        });
+    });
+    
+    count = 0;
+  var counting = $('#change_img').click(function(){
+        console.log('Cliquei');
+        
+    });
+    
+   
+   counting.click(function(){
+        count +=1;
+        if(count === 5){
+            $('#change_img').attr('src', '../images/cat.gif')
         }
-    });
-    });
-
+        console.log(count);
+   });
+   
 });
 
