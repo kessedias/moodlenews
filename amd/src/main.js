@@ -64,13 +64,14 @@ define(['jquery'], function($){
         });
     });
     
+    //função para contar o número de cliques
     count = 0;
-  var counting = $('#change_img').click(function(){
+    var counting = $('#change_img').click(function(){
         console.log('Cliquei');
         
     });
     
-   
+
    counting.click(function(){
         count +=1;
         if(count === 5){
