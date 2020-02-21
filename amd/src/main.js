@@ -2,5 +2,57 @@
 define(['jquery'], function($){
 
     //conteúdo jquery
-    $('button').click(function() { alert('clicked'); });
+    
+    //one star
+    $('#btn1').click(function() { 
+        $('#btn1').addClass('btn-click');
+        $('#btn2').removeClass('btn-click');
+        $('#btn3').removeClass('btn-click');
+        $('#btn4').removeClass('btn-click');
+        $('#btn5').removeClass('btn-click');
+        alert('Notícia muito ruim, é fake news'); 
+    });
+
+    //two stars
+    $('#btn2').click(function() { 
+        $('#btn1').addClass('btn-click');
+        $('#btn2').addClass('btn-click');
+        $('#btn3').removeClass('btn-click');
+        $('#btn4').removeClass('btn-click');
+        $('#btn5').removeClass('btn-click');
+        alert('Não gostei não em!'); 
+    });
+
+    //three stars
+    $('#btn3').click(function() { 
+        $('#btn1').addClass('btn-click');
+        $('#btn2').addClass('btn-click');
+        $('#btn3').addClass('btn-click');
+        $('#btn4').removeClass('btn-click');
+        $('#btn5').removeClass('btn-click');
+        alert('Bom, ta quase lá. Mas ainda acho que é fake news'); 
+    });
+    
+    //four stars
+    $('#btn4').click(function() { 
+        $('#btn1').addClass('btn-click');
+        $('#btn2').addClass('btn-click');
+        $('#btn3').addClass('btn-click');
+        $('#btn4').addClass('btn-click');
+        $('#btn5').removeClass('btn-click');
+        alert('Bem legal essa notícia em!'); 
+    });
+
+    //five stars
+    $('#btn5').click(function() { 
+        $('#btn1').addClass('btn-click');
+        $('#btn2').addClass('btn-click');
+        $('#btn3').addClass('btn-click');
+        $('#btn4').addClass('btn-click');
+        $('#btn5').addClass('btn-click');
+        alert('Vou até postar no grupo do ZapZap da família'); 
+    });
+    
+
 });
+

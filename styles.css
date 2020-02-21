@@ -11,9 +11,18 @@ h1{
    margin-top: 50px !important;
 }
 
-#btn-rating{
-    background: url('http://imgur.com/I0EwG.png') transparent;
+.btn-noclick{
+    background: url('https://image.flaticon.com/icons/svg/1828/1828961.svg');
+    height: 48px;
+    width: 45px;
+    
+    /* display: none; */
+}
+
+.btn-click{
+    background: url('http://imgur.com/I0EwG.png');
     height: 48px;
     width: 45px;
     border: none;
+    /* display: none; */
 }

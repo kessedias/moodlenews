@@ -32,7 +32,7 @@ $PAGE->requires->css('/local/moodlenews/styles.css');
 //imprime a saída do cabeçalho
 echo $OUTPUT->header();
 //chamada do arquivo main.js
-//$PAGE->requires->js_call_amd('local_moodlenews/main');
+$PAGE->requires->js_call_amd('local_moodlenews/main', 'init');
 //Array de notícias
 $news = [];
 
@@ -80,8 +80,13 @@ $out .= html_writer::tag('p', $news[$newsid]['content']);
 $out .= html_writer::start_tag('div', ['class' => 'image-wrapper']);
 $out .= html_writer::tag('img', null, ['src' => $news[$newsid]['sourceimg'], 'alt' => 'img_news', 'width' => 600, 'height'=> 'auto']);
 $out .= html_writer::tag('p','Data: ' . $news[$newsid]['timecreated']);
+$out .= html_writer::tag('p', 'Faça a sua avaliação!');
 $out .= html_writer::start_tag('div', ['class' => 'btn-wrapper']);
-$out .= html_writer::tag('button', null, ['id' => 'btn-rating']);
+$out .= html_writer::tag('button', null, ['class' => 'btn-noclick', 'id' => 'btn1']);
+$out .= html_writer::tag('button', null, ['class' => 'btn-noclick', 'id' => 'btn2']);
+$out .= html_writer::tag('button', null, ['class' => 'btn-noclick', 'id' => 'btn3']);
+$out .= html_writer::tag('button', null, ['class' => 'btn-noclick', 'id' => 'btn4']);
+$out .= html_writer::tag('button', null, ['class' => 'btn-noclick', 'id' => 'btn5']);
 $out .= html_writer::end_tag('div');
 
 //printando a saída do html
