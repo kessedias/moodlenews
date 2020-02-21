@@ -6,7 +6,7 @@ Este plugin foi criado para intuito de testes e recapituação do treinamento em
 </p>
 <h2>Objetivo</h2>
 
-<p>O objetivo principal do mesmo aborda uma lista estática de notícias gerais da plataforma LMS e seus usuários.</p>
+<p>O objetivo principal do plugin é exibir lista estática de notícias e ao clicar na desejada, abrir o conteúdo em uma nova página. Todo o cenário foi reproduzido sem a utilização de banco de dados.</p>
 
 <h2>Instalação</h2>
 <p>Para instalar este plugin, execute um git clone no repositório principal e logo após insira a pasta dentro de 
