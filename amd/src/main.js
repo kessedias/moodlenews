@@ -54,6 +54,8 @@ define(['jquery'], function($){
     });
     
 
+    //ao clicar na tecla enter, o js muda a imagem da noticia
+    //easteregg
     $(document).ready(function(){
     $(document).keypress(function(e){
         if(e.wich == 13 || e.keyCode == 13){
