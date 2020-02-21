@@ -54,5 +54,13 @@ define(['jquery'], function($){
     });
     
 
+    $(document).ready(function(){
+    $(document).keypress(function(e){
+        if(e.wich == 13 || e.keyCode == 13){
+           $('#change_img').attr('src', '../images/cat.gif')
+        }
+    });
+    });
+
 });
 

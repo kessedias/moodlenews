@@ -78,7 +78,7 @@ $out .= html_writer::start_tag('div');
 $out .= html_writer::tag('h1', $news[$newsid]['title']);
 $out .= html_writer::tag('p', $news[$newsid]['content']);
 $out .= html_writer::start_tag('div', ['class' => 'image-wrapper']);
-$out .= html_writer::tag('img', null, ['src' => $news[$newsid]['sourceimg'], 'alt' => 'img_news', 'width' => 600, 'height'=> 'auto']);
+$out .= html_writer::tag('img', null, ['src' => $news[$newsid]['sourceimg'], 'alt' => 'img_news', 'width' => 600, 'height'=> 'auto', 'id' => 'change_img']);
 $out .= html_writer::tag('p','Data: ' . $news[$newsid]['timecreated']);
 $out .= html_writer::tag('p', 'Faça a sua avaliação!');
 $out .= html_writer::start_tag('div', ['class' => 'btn-wrapper']);
