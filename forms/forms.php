@@ -20,5 +20,33 @@ class news_forms extends moodleform {
 
         //chamada do form
         $mform = $this->_form;
-    }
+
+        /**
+         * primeiro parâmetro é o tipo do elemento
+         * o segundo parâmetro é o id
+         * o terceiro é o conteúdo
+         * o quarto é um array de atributos
+         */
+
+        $mform->addElement('header', 'head_guide', get_string('news_guide', 'local_moodlenews'));
+        $mform->addElement('text', 'txt_title', get_string('news_title', 'local_moodlenews'), ['placeholder' => get_string('news_insert_placeholder', 'local_moodlenews')]);
+        $mform->addElement('textarea', 'txta_desc', get_string('news_description', 'local_moodlenews'), ['placeholder' => get_string('news_description_placeholder', 'local_moodlenews'), 'cols' => 50, 'rows' => 2]);
+        $mform->addElement('textarea', 'txta_content', get_string('news_content', 'local_moodlenews' ), ['placeholder' => get_string('news_content_placeholder', 'local_moodlenews'), 'cols' => 50, 'rows' => 5]);
+        $mform->addElement('text', 'sourceimg', get_string('news_image', 'local_moodlenews'), ['placeholder' => get_string('news_image_placeholder', 'local_moodlenews')]);
+        $mform->addElement('text', 'bannerimg', get_string('news_banner', 'local_moodlenews'), ['placeholder' => get_string('news_banner_placeholder', 'local_moodlenews')]);
+
+        //definindo os tipos
+            $mform->setType('head_guide',PARAM_TEXT);
+            $mform->setType('txt_title',PARAM_TEXT);
+            $mform->setType('txta_desc',PARAM_TEXT);
+            $mform->setType('txta_content',PARAM_TEXT);
+            $mform->setType('sourceimg',PARAM_TEXT);
+            $mform->setType('bannerimg',PARAM_TEXT);
+
+
+        //botões pré pronto do moodle
+        //primeiro parâmetro habilita ou não o botão cancelar
+        $this->add_action_buttons(true, 'Criar notícia');
+    
+    } 
 }

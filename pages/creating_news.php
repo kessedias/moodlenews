@@ -37,7 +37,7 @@ if($mform->is_cancelled()){
     $mform->display();
     //depois do display, cria um objeto(array)
     //time pega o horário atual do sistema em timestamp
-    $SESSION->count[time()] = $data;
+    $SESSION->news[time()] = $data;
 }else{
     $mform->display(); //exibe os elementos na tela
 
@@ -46,7 +46,8 @@ if($mform->is_cancelled()){
     $out .= html_writer::tag('p', 'Nenhum conteúdo encontrado');
     $out .= html_writer::end_tag('div');
 }
-
+//print('<pre>');
+//var_dump($SESSION->news);
 echo $out;
 
 echo $OUTPUT->footer();
