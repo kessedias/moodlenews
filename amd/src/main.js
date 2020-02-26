@@ -71,7 +71,7 @@ define(['jquery'], function($){
         
     });
     
-
+    
    counting.click(function(){
         count +=1;
         if(count === 5){

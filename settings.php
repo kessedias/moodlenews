@@ -23,3 +23,13 @@ $ADMIN->add(
         new moodle_url('/local/moodlenews/pages/description_news.php')
     )
 );
+
+$ADMIN->add(
+    //definindo uma rota de link para acessar a página principal do plugin
+    'moodlenews',
+    new admin_externalpage(
+        'moodlenews',
+        get_string('create_news', 'local_moodlenews'),
+        new moodle_url('/local/moodlenews/pages/creating_news.php')
+    )
+);
