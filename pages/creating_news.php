@@ -29,12 +29,15 @@ $mform = new news_forms();
 
 if($mform->is_cancelled()){
 
-    //quando eu dou o submi, ele cria um objeto e manda para o get_data
+    //quando eu dou o submit, ele cria um objeto e manda para o get_data
 }else if($data = $mform->get_data()){
     //chama o global session que tem como objetivo, gerenciar a sessão do moodle
     GLOBAL $_SESSION;
 
     $mform->display();
+    $out = html_writer::start_tag('div', ['id' => 'alert', 'class' => 'alert alert-success']);
+    $out .= html_writer::tag('p', 'Conteúdo criado com sucesso');
+    $out .= html_writer::end_tag('div');
     //depois do display, cria um objeto(array)
     //time pega o horário atual do sistema em timestamp
     $SESSION->news[time()] = $data;
@@ -51,3 +54,4 @@ if($mform->is_cancelled()){
 echo $out;
 
 echo $OUTPUT->footer();
+

@@ -43,6 +43,14 @@ class news_forms extends moodleform {
             $mform->setType('sourceimg',PARAM_TEXT);
             $mform->setType('bannerimg',PARAM_TEXT);
 
+        //Adicionando regras
+        $mform->addRule('txt_title', 'O campo título é obrigatório', 'required', 'server');
+        $mform->addRule('txta_desc', 'O campo descrição é obrigatório', 'required', 'server');
+        $mform->addRule('txta_content', 'O campo conteúdo é obrigatório', 'required', 'server');
+        $mform->addRule('sourceimg', 'A inserção do link da imagem de capa é obrigatória', 'required', 'server');
+        $mform->addRule('bannerimg', 'A inserção do link de imagem do banner é obrigatória', 'required', 'server');
+
+
 
         //botões pré pronto do moodle
         //primeiro parâmetro habilita ou não o botão cancelar
