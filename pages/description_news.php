@@ -72,16 +72,34 @@ $out .= html_writer::tag('img', null, ['class' => 'card-img-top img-test','src' 
 $out .= html_writer::start_tag('div', ['class' => 'card-body']);
 $out .= html_writer::start_tag('a', ['href' => $CFG->wwwroot."/local/moodlenews/pages/index.php?id=".$value['id']]);
 $out .= html_writer::tag('h2', $value['title'], ['class' => 'card-title']);
-$out .= html_writer::start_tag('a');
+$out .= html_writer::end_tag('a');
 $out .= html_writer::tag('p', $value['description'], ['class' => 'card-text']);
 $out .= html_writer::end_tag('div');
 
 }
 
+if(isset($SESSION->news)){
+    foreach($SESSION->news as $key => $value){;
+
+        $out .= html_writer::start_tag('div', null, ['class' => 'mb-3']);
+        $out .= html_writer::tag('img', null, ['class' => 'card-img-top img-test','src' => $value->bannerimg, 'alt' => 'img_teste']);
+        $out .= html_writer::start_tag('div', ['class' => 'card-body']);
+        $out .= html_writer::start_tag('a', ['href' => $CFG->wwwroot."/local/moodlenews/pages/index_content.php?id=". $key]);
+        $out .= html_writer::tag('h2', $value->txt_title, ['class' => 'card-title']);
+        $out .= html_writer::end_tag('a');
+        $out .= html_writer::tag('p', $value->txta_desc, ['class' => 'card-text']);
+        $out .= html_writer::end_tag('div');
+       
+    } 
+}else{
+    $out .= html_writer::tag('img', null, ['class' => 'card-img-top img-test','src' => 'https://media.tenor.com/images/dac79996006d7dd97e7097c2662bab74/tenor.gif', 'alt' => 'img_cat']);
+}
+
+
+
 //printando a saída do html
 echo $out;
-
+//print('Teste' . '<pre>');
+//var_dump($SESSION->news);
 //printando a saída do rodapé;
 echo $OUTPUT->footer();
-
-
