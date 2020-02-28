@@ -50,7 +50,9 @@ class news_forms extends moodleform {
         $mform->addRule('sourceimg', 'A inserção do link da imagem de capa é obrigatória', 'required', 'server');
         $mform->addRule('bannerimg', 'A inserção do link de imagem do banner é obrigatória', 'required', 'server');
 
-
+        //Definindo os helpers
+        $mform->addHelpButton('sourceimg', 'news_sourceimg', 'local_moodlenews');
+        $mform->addHelpButton('bannerimg', 'news_bannerimg', 'local_moodlenews');
 
         //botões pré pronto do moodle
         //primeiro parâmetro habilita ou não o botão cancelar

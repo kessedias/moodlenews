@@ -23,3 +23,5 @@
  $string['news_content_placeholder'] = 'Insira aqui o conteúdo da sua notícia';
  $string['news_image_placeholder'] = 'Insira aqui a url da imagem de conteúdo';
  $string['news_banner_placeholder'] = 'Insira aqui a imagem de capa (banner)';
+ $string['news_sourceimg_help'] = 'Aqui você deverá inserir o link de sua imagem do conteúdo. <br>Por exemplo: <strong> Link Desmonstrativo - </strong><em>img.com.br/3939002test.jpg</em> <br>Formatos de imagens compatíveis: <em>*.png, *.jpg e *jpeg </em>.';
+$string['news_bannerimg_help'] = 'Aqui você deverá inserir o link da sua imagem da descrição (Banner). <br>Por exemplo: <strong>Link Demonstrativo  - </strong><em>banner.test.br/8984232test.png</em><br>Formatos de imagens compatíveis: <em>*.png, *.jpg e *jpeg </em>.';

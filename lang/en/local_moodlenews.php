@@ -23,3 +23,6 @@ $string['news_description_placeholder'] = 'Insert here your news description';
 $string['news_content_placeholder'] = 'Insert here your news content';
 $string['news_image_placeholder'] = 'Insert here your url image';
 $string['news_banner_placeholder'] = 'Insert here your banner image';
+$string['news_banner_placeholder'] = 'Insert here your banner image';
+$string['news_sourceimg_help'] = 'Here you can insert the url image of your content image. <br>For example: <strong>Desmonstrative link - </strong><em>img.co.sx/3939002test.jpg</em> <br>Compatibles image formats: <em>*.png, *.jpg and *jpeg </em>.';
+$string['news_bannerimg_help'] = 'Here you can insert the url image of your banner image. <br>For example: <strong>Desmonstrative link - </strong><em>banner.test.sx/8984232test.png</em><br>Compatibles image formats: <em>*.png, *.jpg and *jpeg </em>.';
